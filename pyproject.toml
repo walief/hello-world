@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hello-world"
+version = "0.1.0"
+description = "A tiny Python starter project with CLI and tests."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Contributors" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+hello-world = "hello_world.main:main"
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
