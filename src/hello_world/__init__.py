@@ -3,6 +3,6 @@
 __all__ = ["get_message"]
 
 
-def get_message() -> str:
-    """Return the default greeting message."""
-    return "Hello, world!"
+def get_message(name: str = "world") -> str:
+    """Return a greeting message for the provided name."""
+    return f"Hello, {name}!"
